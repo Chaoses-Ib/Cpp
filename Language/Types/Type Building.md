@@ -1,4 +1,6 @@
 # Type Building
+Build the type step by step instead of declaring the entire type at once.
+
 Basic idea:
 ```cpp
 #include <utility>
@@ -32,7 +34,7 @@ int main()
 }
 ```
 
-Make a static-sized output stream:
+Make a static-sized output stream by type building:
 ```cpp
 #include <array>
 #include <utility>
@@ -75,7 +77,7 @@ int main()
         auto s3 = out.write<decltype(s2)>(1.0);
         return s3;
     };
-    OutputStream<sizeof(decltype(f(*(OutputStream<0>*)nullptr)))> out;
+    OutputStream<sizeof(f(*(OutputStream<0>*)nullptr))> out;
     f(out);
     for (uint8_t byte : out.buf)
         std::cout << (int)byte << ' ';
