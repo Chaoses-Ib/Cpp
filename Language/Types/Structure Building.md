@@ -1,5 +1,5 @@
-# Type Building
-Build the type step by step instead of declaring the entire type at once.
+# Structure Building
+Build a structure step by step instead of declaring the entire structure at once.
 
 Basic idea:
 ```cpp
@@ -34,7 +34,7 @@ int main()
 }
 ```
 
-Make a static-sized output stream by type building:
+Make a static-sized output stream by structure building:
 ```cpp
 #include <array>
 #include <utility>
