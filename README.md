@@ -9,6 +9,8 @@
     - [Structure Building](Language/Types/Structure%20Building.md)
   - [Storage](Language/Storage/README.md)
     - [Dynamic Storage](Language/Storage/Dynamic%20Storage.md)
+  - [Functions](Language/Functions/README.md)
+    - [Return Type Overloading](Language/Functions/Return%20Type%20Overloading.md)
 - [Development](Development/README.md)
   - [Visual Studio Code](Development/Visual%20Studio%20Code.md)
 - [Carbon](Carbon/README.md)
