@@ -7,6 +7,7 @@
 - [Language](Language/README.md)
   - [Types](Language/Types/README.md)
     - [Structure Building](Language/Types/Structure%20Building.md)
+    - [Automatic Conversions](Language/Types/Automatic%20Conversions.md)
   - [Storage](Language/Storage/README.md)
     - [Dynamic Storage](Language/Storage/Dynamic%20Storage.md)
   - [Functions](Language/Functions/README.md)
