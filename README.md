@@ -6,6 +6,7 @@
       - [Counter](C/Language/Preprocessor/Counter.md)
 - [Language](Language/README.md)
   - [Types](Language/Types/README.md)
+    - [Array](Language/Types/Array.md)
     - [Structure Building](Language/Types/Structure%20Building.md)
     - [Automatic Conversions](Language/Types/Automatic%20Conversions.md)
   - [Storage](Language/Storage/README.md)

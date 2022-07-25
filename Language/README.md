@@ -1,5 +1,6 @@
 # Language
 - [Types](Types/README.md)
+  - [Array](Types/Array.md)
   - [Structure Building](Types/Structure%20Building.md)
   - [Automatic Conversions](Types/Automatic%20Conversions.md)
 - [Storage](Storage/README.md)
