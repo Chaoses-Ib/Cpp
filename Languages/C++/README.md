@@ -1,4 +1,4 @@
-# Language
+# C++
 - [Types](Types/README.md)
   - [Array](Types/Array.md)
   - [Structure Building](Types/Structure%20Building.md)
