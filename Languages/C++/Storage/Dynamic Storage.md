@@ -1,4 +1,45 @@
 # Dynamic Storage
+## Array allocation
+[^pvs]
+
+`delete[]` does not require the size of the array to be destroyed. There are two main approaches to the way compilers remember the size:
+- Over-allocation: Storing the size in the allocated array.  
+  The basic implementation is:
+  ```cpp
+  // Get the size of the array to be destroyed
+  size_t n = *(size_t*)((char*)p - sizeof(size_t));
+
+  // Call the destructor for each element
+  while (n--)
+  {
+    p[n].~ClassName();
+  }
+
+  // Release the memory
+  operator delete[] ((char*)p - sizeof(size_t));
+  ```
+  MSVC, GCC and Clang use this strategy.
+  
+- Associative array: Storing the size in a separate associative array.  
+  The basic implementation is:
+  ```cpp
+  // Get the size of the array to be destroyed
+  size_t n = array_size_association.lookup(p);
+
+  // Call the destructor for each element
+  while (n-- != 0)
+  {
+    p[n].~SomeClass();
+  }
+
+  // Release the memory
+  operator delete[] (p);
+  ```
+
+Note that objects with [trivial destructors](https://en.cppreference.com/w/cpp/language/destructor#Trivial_destructor) do not require a delete expression and may be disposed of by simply deallocating their storage.
+
+[^pvs]: [Why do arrays have to be deleted via delete\[\] in C++](https://pvs-studio.com/en/blog/posts/cpp/0973/)
+
 ## Why does a virtual destructor require delete operator? (since C++98)
 <details><summary>C++98 [class.dtor] p11</summary>
 
