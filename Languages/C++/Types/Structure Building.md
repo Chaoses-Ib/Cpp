@@ -34,7 +34,7 @@ int main()
 }
 ```
 
-Make a static-sized output stream by structure building:
+Make a static-sized output stream by structure building[^ostream-reddit][^ostream-so]:
 ```cpp
 #include <array>
 #include <utility>
@@ -83,3 +83,6 @@ int main()
         std::cout << (int)byte << ' ';
 }
 ```
+
+[^ostream-reddit]: [How to make a static-sized output stream? : cpp_questions](https://www.reddit.com/r/cpp_questions/comments/wost4b/how_to_make_a_staticsized_output_stream/)
+[^ostream-so]: [How to make a static-sized output stream in C++? - Stack Overflow](https://stackoverflow.com/questions/73357916/how-to-make-a-static-sized-output-stream-in-c)
