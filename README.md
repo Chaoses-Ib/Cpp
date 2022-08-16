@@ -16,7 +16,9 @@
 - [Carbon](Languages/Carbon/README.md)
 
 ## [Build](Build/README.md)
-- [Compilers](Build/Compilers/README.md)
+- [Compiling](Build/Compiling/README.md)
+  - [Compilers](Build/Compiling/Compilers.md)
+  - [Linking](Build/Compiling/Linking.md)
 
 ## [Development](Development/README.md)
 - [Visual Studio Code](Development/Visual%20Studio%20Code.md)
