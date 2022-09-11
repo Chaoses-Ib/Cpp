@@ -15,6 +15,11 @@
     - [Return Type Overloading](Languages/C++/Functions/Return%20Type%20Overloading.md)
 - [Carbon](Languages/Carbon/README.md)
 
+## Libraries
+### Text
+- [Templating](Libraries/Text/Templating/README.md)
+  - [{fmt}](Libraries/Text/Templating/{fmt}.md)
+
 ## [Build](Build/README.md)
 - [Compiling](Build/Compiling/README.md)
   - [Compilers](Build/Compiling/Compilers.md)
