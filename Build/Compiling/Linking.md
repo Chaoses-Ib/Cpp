@@ -5,8 +5,14 @@
 ## Auto-linking
 Auto-linking is a mechanism for automatically determining which libraries to link to while building a C, C++ or Obj-C program.[^auto-wiki]
 
-- MSVC: [#pragma comment(lib, "NAME")](https://docs.microsoft.com/en-us/cpp/preprocessor/comment-c-cpp#lib)  
-  The linker searches for this library the same way as if you specified it on the command line, as long as the library isn't specified by using [/NODEFAULTLIB](https://docs.microsoft.com/en-us/cpp/build/reference/nodefaultlib-ignore-libraries).
+- MSVC: Default libraries
+  - [CRT](https://learn.microsoft.com/en-us/cpp/c-runtime-library/crt-library-features#c-standard-library-stl-lib-files): `msvcprt(d).lib` or `libcpmt(d).lib`
+  - [#pragma comment(lib, "NAME")](https://docs.microsoft.com/en-us/cpp/preprocessor/comment-c-cpp#lib)  
+    The linker searches for this library the same way as if you specified it on the command line, as long as the library isn't specified by using [/NODEFAULTLIB](https://docs.microsoft.com/en-us/cpp/build/reference/nodefaultlib-ignore-libraries).
+
+  Disable:
+  - [/NODEFAULTLIB](https://learn.microsoft.com/en-us/cpp/build/reference/nodefaultlib-ignore-libraries?view=msvc-170)
+  - [/Zl: Omit Default Library Name](https://learn.microsoft.com/en-us/cpp/build/reference/zl-omit-default-library-name)
 - MSVC & [vcpkg](https://github.com/microsoft/vcpkg): AutoLink  
   Automatic linking with libraries build using vcpkg.
 
@@ -19,3 +25,6 @@ Auto-linking is a mechanism for automatically determining which libraries to lin
   ```
 
 [^auto-wiki]: [Auto-linking - Wikipedia](https://en.wikipedia.org/wiki/Auto-linking)
+
+## Entry point
+- MSVC: [/ENTRY](https://learn.microsoft.com/en-us/cpp/build/reference/entry-entry-point-symbol), [/NOENTRY](https://learn.microsoft.com/en-us/cpp/build/reference/noentry-no-entry-point)

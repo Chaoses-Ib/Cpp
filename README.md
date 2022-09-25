@@ -17,15 +17,15 @@
     - [Feature Testing](Languages/C++/Preprocessor/Feature%20Testing.md)
 - [Carbon](Languages/Carbon/README.md)
 
-## Libraries
-### Text
-- [Templating](Libraries/Text/Templating/README.md)
-  - [{fmt}](Libraries/Text/Templating/{fmt}.md)
-
 ## Build
 - Compiling
   - [Compilers](Build/Compiling/Compilers.md)
   - [Linking](Build/Compiling/Linking.md)
+
+## Libraries
+### Text
+- [Templating](Libraries/Text/Templating/README.md)
+  - [{fmt}](Libraries/Text/Templating/{fmt}.md)
 
 ## Development
 - [Visual Studio Code](Development/Visual%20Studio%20Code.md)
