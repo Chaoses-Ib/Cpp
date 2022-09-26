@@ -2,6 +2,9 @@
 ## Linkers
 - [MSVC](https://docs.microsoft.com/en-us/cpp/build/reference/linking)
 
+## Link-time code generation
+MSVC: [/LTCG](https://learn.microsoft.com/en-us/cpp/build/reference/ltcg-link-time-code-generation)
+
 ## Auto-linking
 Auto-linking is a mechanism for automatically determining which libraries to link to while building a C, C++ or Obj-C program.[^auto-wiki]
 

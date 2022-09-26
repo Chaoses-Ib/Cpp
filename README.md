@@ -21,6 +21,8 @@
 - Compiling
   - [Compilers](Build/Compiling/Compilers.md)
   - [Linking](Build/Compiling/Linking.md)
+  - [Dynamic Linking](Build/Compiling/Dynamic%20Linking.md)
+  - [Optimization](Build/Compiling/Optimization.md)
 
 ## Libraries
 ### Text
