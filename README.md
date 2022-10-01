@@ -17,6 +17,14 @@
     - [Feature Testing](Languages/C++/Preprocessor/Feature%20Testing.md)
 - [Carbon](Languages/Carbon/README.md)
 
+## [Design Patterns](Design%20Patterns/README.md)
+- [Dependency Injection](Design%20Patterns/Dependency%20Injection.md)
+
+## Libraries
+### Text
+- [Templating](Libraries/Text/Templating/README.md)
+  - [{fmt}](Libraries/Text/Templating/{fmt}.md)
+
 ## Build
 - Compiling
   - [Compilers](Build/Compiling/Compilers.md)
@@ -28,16 +36,12 @@
     - [Compiling](Build/Build%20Systems/CMake/Compiling.md)
     - [Linking](Build/Build%20Systems/CMake/Linking.md)
 
-## Libraries
-### Text
-- [Templating](Libraries/Text/Templating/README.md)
-  - [{fmt}](Libraries/Text/Templating/{fmt}.md)
-
 ## Development
 - [Visual Studio Code](Development/Visual%20Studio%20Code.md)
 
 ## Information sources
-Blogs:
+<details><summary>Blogs</summary>
+
 - [Standard C++](https://isocpp.org/)
 - [Modernes C++](http://www.modernescpp.com/)
 - [C++ Stories](https://www.cppstories.com/)
@@ -58,13 +62,18 @@ Blogs:
   Inactive, 繁体中文.
 - [C++ Team Blog](https://devblogs.microsoft.com/cppblog/)  
   C++ tutorials, C and C++ news, and information about Visual Studio, Visual Studio Code, and Vcpkg from the Microsoft C++ team.
+</details>
 
-Videos:
+<details><summary>Videos</summary>
+
 - [CppCon](https://www.youtube.com/channel/UCMlGfpWw-RUdWX_JbLCukXg)
+</details>
 
-News:
+<details><summary>News</summary>
+
 - [r/cpp](https://www.reddit.com/r/cpp/)
 - [Awesome C++ Weekly](https://cpp.libhunt.com/newsletter)
 - [r/CarbonLang](https://www.reddit.com/r/CarbonLang/)
 - [r/C_Programming](https://www.reddit.com/r/C_Programming/)
 - [r/cpp_questions](https://www.reddit.com/r/cpp_questions/)
+</details>
