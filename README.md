@@ -9,6 +9,7 @@
     - [Array](Languages/C++/Types/Array.md)
     - [Structure Building](Languages/C++/Types/Structure%20Building.md)
     - [Automatic Conversions](Languages/C++/Types/Automatic%20Conversions.md)
+    - [Run-Time Type Information](Languages/C++/Types/Run-Time%20Type%20Information.md)
   - Storage
     - [Dynamic Storage](Languages/C++/Storage/Dynamic%20Storage.md)
   - Functions
