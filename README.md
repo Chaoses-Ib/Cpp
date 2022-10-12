@@ -12,7 +12,7 @@
     - [Run-Time Type Information](Languages/C++/Types/Run-Time%20Type%20Information.md)
   - Storage
     - [Dynamic Storage](Languages/C++/Storage/Dynamic%20Storage.md)
-  - Functions
+  - [Functions](Languages/C++/Functions/README.md)
     - [Return Type Overloading](Languages/C++/Functions/Return%20Type%20Overloading.md)
   - Preprocessor
     - [Feature Testing](Languages/C++/Preprocessor/Feature%20Testing.md)
