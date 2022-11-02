@@ -4,6 +4,9 @@
   - Preprocessor
     - [Predefined Macros](Languages/C/Preprocessor/Predefined%20Macros.md)
     - [Counter](Languages/C/Preprocessor/Counter.md)
+  - Types
+    - String
+      - [Compilation](Languages/C/Types/String/Compilation.md)
 - C++
   - Types
     - [Array](Languages/C++/Types/Array.md)
