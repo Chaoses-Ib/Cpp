@@ -25,9 +25,12 @@
 - [Dependency Injection](Design%20Patterns/Dependency%20Injection.md)
 
 ## Libraries
-### Text
-- [Templating](Libraries/Text/Templating/README.md)
-  - [{fmt}](Libraries/Text/Templating/{fmt}.md)
+- Text
+  - [Templating](Libraries/Text/Templating/README.md)
+    - [{fmt}](Libraries/Text/Templating/{fmt}.md)
+- IO
+  - Streams
+    - [Input Streams](Libraries/IO/Streans/Input%20Streams.md)
 
 ## Build
 - Compiling
