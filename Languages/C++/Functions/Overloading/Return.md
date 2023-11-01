@@ -21,6 +21,6 @@ int main() {
 }
 ```
 
-See also [Automatic Conversions](../Types/Automatic%20Conversions.md).
+See also [Automatic Conversions](../../Types/Conversions/Automatic.md).
 
 [^oldnewthing]: [How can I have a C++ function that returns different types depending on what the caller wants? - The Old New Thing](https://devblogs.microsoft.com/oldnewthing/20191106-00/?p=103066)

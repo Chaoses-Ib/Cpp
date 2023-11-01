@@ -1,4 +1,55 @@
 # Dynamic Storage
+## `new`
+- 初始化：
+
+  ```cpp
+  int a = new int (6);
+  ```
+  或
+  ```cpp
+  int a = new int {6};
+  ```
+
+- `new` 失败时将引发 `std::bad_alloc` 异常
+
+  [C++ 每次 new 都需要做异常处理吗？ - 知乎](https://www.zhihu.com/question/52291267)
+
+- `new` 是一个运算符（`new[]` 则是另一个）
+
+  `operator new`？
+
+- `placement new`（定位 new）运算符：
+
+  `<new>`
+  ```cpp
+  p = new(buffer) int;
+  ```
+  因为 buffer 不是 `new` 分配的，所以也就不能用 `delete` 来释放（除非 buffer 之前就是用 `new` 创建的）
+
+  [C++ 网易面试题“让new操作符不分配内存，只调用构造函数” - 简书](https://www.jianshu.com/p/b52a5df69c88)
+
+## `delete`
+- `delete` 只能删除 `new` 分配的内存，而不能是栈上的内存
+
+  （VC++ 中，这会触发一个异常）
+
+- `delete` 空指针 是安全的
+
+- `new` 的数组必须通过 `delete [] arr` 来释放，使用 `delete arr` 的后果是不确定的
+
+  （但用 `new []` 为一个实体分配内存时仍用 `delete` 来释放）
+
+  [Effective C++ 16：使用同样的形式来new和delete | Harttle Land](https://harttle.land/2015/08/07/effective-cpp-16.html)
+
+## Classes
+除了构造和析构，还要注意以下函数：
+- 拷贝构造
+- 移动拷贝构造
+- `operator=`
+- 移动 `operator=`
+
+能使用智能指针的地方建议使用智能指针。
+
 ## Array allocation
 [^pvs]
 

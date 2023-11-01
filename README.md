@@ -1,4 +1,4 @@
-# C++
+# [C++](C++.md)
 ## Languages
 - C
   - Preprocessor
@@ -8,15 +8,37 @@
     - String
       - [Compilation](Languages/C/Types/String/Compilation.md)
 - C++
-  - Types
+  - [Scopes](Languages/C++/Scopes.md)
+  - [Namespaces](Languages/C++/Namespaces.md)
+  - [Aliases](Languages/C++/Aliases.md)
+  - [Types](Languages/C++/Types/README.md)
     - [Array](Languages/C++/Types/Array.md)
+    - [Classes](Languages/C++/Types/Classes/README.md)
+      - [Inheritance](Languages/C++/Types/Classes/Inheritance.md)
+      - [Constructors](Languages/C++/Types/Classes/Constructors.md)
+      - [Destructors](Languages/C++/Types/Classes/Destructors.md)
+      - [Conversion Functions](Languages/C++/Types/Classes/Conversion.md)
     - [Structure Building](Languages/C++/Types/Structure%20Building.md)
-    - [Automatic Conversions](Languages/C++/Types/Automatic%20Conversions.md)
+    - [Conversions](Languages/C++/Types/Conversions/README.md)
+      - [Automatic Conversions](Languages/C++/Types/Conversions/Automatic.md)
     - [Run-Time Type Information](Languages/C++/Types/Run-Time%20Type%20Information.md)
   - Storage
-    - [Dynamic Storage](Languages/C++/Storage/Dynamic%20Storage.md)
+    - [Dynamic Storage](Languages/C++/Storage/Dynamic.md)
+  - Expressions
+    - Operators
+      - [Operator Overloading](Languages/C++/Expressions/Operators/Overloading.md)
+    - [Constant Expressions](Languages/C++/Expressions/Constant.md)
   - [Functions](Languages/C++/Functions/README.md)
-    - [Return Type Overloading](Languages/C++/Functions/Return%20Type%20Overloading.md)
+    - [Lambda Expressions](Languages/C++/Functions/Lambda.md)
+    - [Function Overloading](Languages/C++/Functions/Overloading/README.md)
+      - [Return Type Overloading](Languages/C++/Functions/Overloading/Return.md)
+  - [Statements](Languages/C++/Statements/README.md)
+    - [Loops](Languages/C++/Statements/README.md)
+    - [Attributes](Languages/C++/Statements/Attributes.md)
+  - [Errors](Languages/C++/Errors/README.md)
+    - Assertions
+      - [Static Assertions](Languages/C++/Errors/Assertions/Static.md)
+    - [Exceptions](Languages/C++/Errors/Exceptions/README.md)
   - Preprocessor
     - [Feature Testing](Languages/C++/Preprocessor/Feature%20Testing.md)
 - [Carbon](Languages/Carbon/README.md)
@@ -32,7 +54,7 @@
   - Streams
     - [Input Streams](Libraries/IO/Streans/Input%20Streams.md)
 
-## Build
+## [Build](Build/README.md)
 - Compiling
   - [Compilers](Build/Compiling/Compilers.md)
   - [Linking](Build/Compiling/Linking.md)

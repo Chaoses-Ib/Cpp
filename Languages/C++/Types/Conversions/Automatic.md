@@ -1,5 +1,5 @@
 # Automatic Conversions
-By utilizing [return type overloading](../Functions/Return%20Type%20Overloading.md), we can implement automatic conversions - conversions that convert the expression to any desired type, even those not allowed by implicit conversions. The basic idea is:
+By utilizing [return type overloading](../../Functions/Overloading/Return.md), we can implement automatic conversions - conversions that convert the expression to any desired type, even those not allowed by implicit conversions. The basic idea is:
 ```cpp
 #include <cstdint>
 

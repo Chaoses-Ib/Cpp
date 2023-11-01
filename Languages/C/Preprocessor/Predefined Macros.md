@@ -2,6 +2,33 @@
 [Replacing text macros - cppreference.com](https://en.cppreference.com/w/c/preprocessor/replace)
 - MSVC: [Predefined macros | Microsoft Docs](https://docs.microsoft.com/en-us/cpp/preprocessor/predefined-macros?view=msvc-170)
 
+Macros:
+- `_DEBUG`
+
+  由使用的 CRT 决定
+
+- `NDEBUG`
+
+  C/C++ 标准
+
+  当定义时，`assert()` 将被忽略
+
+  [c++ - _DEBUG vs NDEBUG - Stack Overflow](https://stackoverflow.com/questions/2290509/debug-vs-ndebug#comment2254773_2290616)
+
+- `_WIN32`
+
+  x86, x64
+
+  32-bit ARM, 64-bit ARM
+
+- `_WIN64`
+
+  x64
+
+  64-bit ARM
+
+[Boost.Predef - 1.76.0](https://www.boost.org/doc/libs/1_76_0/libs/predef/doc/index.html)
+
 ## Date, time and timestamp
 Macro | Standard | Description
 --- | --- | ---
