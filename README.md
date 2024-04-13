@@ -7,7 +7,7 @@
   - Types
     - String
       - [Compilation](Languages/C/Types/String/Compilation.md)
-- C++
+- [C++](Languages/C++/README.md)
   - [Scopes](Languages/C++/Scopes.md)
   - [Namespaces](Languages/C++/Namespaces.md)
   - [Aliases](Languages/C++/Aliases.md)
@@ -34,11 +34,11 @@
       - [Return Type Overloading](Languages/C++/Functions/Overloading/Return.md)
   - [Statements](Languages/C++/Statements/README.md)
     - [Loops](Languages/C++/Statements/README.md)
-    - [Attributes](Languages/C++/Statements/Attributes.md)
   - [Errors](Languages/C++/Errors/README.md)
     - Assertions
       - [Static Assertions](Languages/C++/Errors/Assertions/Static.md)
     - [Exceptions](Languages/C++/Errors/Exceptions/README.md)
+  - [Attributes](Languages/C++/Attributes.md)
   - Preprocessor
     - [Feature Testing](Languages/C++/Preprocessor/Feature%20Testing.md)
 - [Carbon](Languages/Carbon/README.md)
