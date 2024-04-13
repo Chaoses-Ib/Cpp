@@ -43,7 +43,6 @@
   并不是
 
 ## [Static members](https://en.cppreference.com/w/cpp/language/static)
-
 - 静态类成员与对象无关，所有对象共用一个
 
   只能在类外初始化：`int myclass::mem = 0;`（除非是 `const` 整型（或 `enum`））
@@ -61,6 +60,13 @@
 5. 地址运算符
 
 移动构造函数、移动赋值运算符
+
+## [Nested classes](https://en.cppreference.com/w/cpp/language/nested_types)
+外面的类能访问里面类的 private？
+
+[C++ Outer class access Inner class's private - why forbidden - Stack Overflow](https://stackoverflow.com/questions/36008654/c-outer-class-access-inner-classs-private-why-forbidden)
+
+似乎不行，里面的倒的确能访问外面的
 
 ## [Forward declarations](https://en.cppreference.com/w/cpp/language/class)
 前向声明只能用来定义参数/指针，不能用来实例化、调用方法。

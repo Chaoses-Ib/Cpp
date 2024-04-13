@@ -43,9 +43,6 @@
     - [Feature Testing](Languages/C++/Preprocessor/Feature%20Testing.md)
 - [Carbon](Languages/Carbon/README.md)
 
-## [Design Patterns](Design%20Patterns/README.md)
-- [Dependency Injection](Design%20Patterns/Dependency%20Injection.md)
-
 ## Libraries
 - Text
   - [Templating](Libraries/Text/Templating/README.md)
