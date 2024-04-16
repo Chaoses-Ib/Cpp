@@ -5,8 +5,46 @@
 
 ![](images/README/issues.png)
 
-## 英文语言包
+## Installation
+- Scoop: `scoop install vcpkg`
+
+`sudo vcpkg integrate install`
+
+### 英文语言包
 必须要 VS 安装英文语言包，否则无法安装库。
+
+## Classic mode
+- 安装 package 时**不会**自动更新依赖，可能因此导致编译失败。
+
+### 库版本问题
+[How to specify a version of a library - Issue #1681 - microsoft/vcpkg](https://github.com/microsoft/vcpkg/issues/1681)
+1. git checkout <sha> -- prots/boost
+2. [Vcpkg 2020.04 Update and Product Roadmap - C++ Team Blog](https://devblogs.microsoft.com/cppblog/vcpkg-2020-04-update-and-product-roadmap/)
+3. [vcpkg/versioning.md at master - microsoft/vcpkg](https://github.com/microsoft/vcpkg/blob/master/docs/users/versioning.md)
+
+## Manifest mode
+[Manifest mode | Microsoft Learn](https://learn.microsoft.com/en-us/vcpkg/concepts/manifest-mode)
+
+[vcpkg.json Reference | Microsoft Learn](https://learn.microsoft.com/en-us/vcpkg/reference/vcpkg-json)
+```json
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "dependencies": [
+    "boost-system",
+    {
+      "name": "cpprestsdk",
+      "default-features": false
+    },
+    "libxml2",
+    "yajl"
+  ]
+}
+```
+
+## CLI
+- Auto-completion
+
+  `./vcpkg integrate powershell`
 
 ## CMake
 ```cmd
@@ -49,11 +87,12 @@ vcpkg install zlib --triplet x64-windows
 
 项目右键，左侧列表就有 vcpkg
 
-## 库版本问题
-[How to specify a version of a library - Issue #1681 - microsoft/vcpkg](https://github.com/microsoft/vcpkg/issues/1681)
-1. git checkout <sha> -- prots/boost
-2. [Vcpkg 2020.04 Update and Product Roadmap - C++ Team Blog](https://devblogs.microsoft.com/cppblog/vcpkg-2020-04-update-and-product-roadmap/)
-3. [vcpkg/versioning.md at master - microsoft/vcpkg](https://github.com/microsoft/vcpkg/blob/master/docs/users/versioning.md)
+### Static CRT 问题
+内建的 x64-windows-static 会使用静态 CRT，很不舒服。
+
+使用 x64-windows-static-md 和 x86-windows-static-md 代替。
+
+[Does vcpkg build \`-static\` triplet with static CRT? - Issue #4274 - microsoft/vcpkg](https://github.com/microsoft/vcpkg/issues/4274)
 
 ## proxy 问题
 ```cmd
@@ -85,13 +124,6 @@ set HTTPS_PROXY=socks5://localhost:10807/
 [→中文用户名问题]()
 
 > [Error: Building package boost-regex:x64-windows failed with: BUILD\_FAILED - Issue #9945 - microsoft/vcpkg](https://github.com/microsoft/vcpkg/issues/9945)
-
-## Static CRT 问题
-内建的 x64-windows-static 会使用静态 CRT，很不舒服。
-
-使用 x64-windows-static-md 和 x86-windows-static-md 代替。
-
-[Does vcpkg build \`-static\` triplet with static CRT? - Issue #4274 - microsoft/vcpkg](https://github.com/microsoft/vcpkg/issues/4274)
 
 ## 批量移除问题
 [Remove multiple packages at once (wildcards) - Issue #2793 - microsoft/vcpkg](https://github.com/microsoft/vcpkg/issues/2793)
