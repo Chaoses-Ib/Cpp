@@ -61,6 +61,8 @@
   - CMake
     - [Compiling](Build/Build%20Systems/CMake/Compiling.md)
     - [Linking](Build/Build%20Systems/CMake/Linking.md)
+- Package Managers
+  - [vcpkg](Build/Packages/vcpkg/README.md)
 
 ## Development
 - [Visual Studio Code](Development/Visual%20Studio%20Code.md)
