@@ -3,8 +3,33 @@
 
 我终于也用上了 vcpkg，从此引用库只需要一行命令行，一行#include。
 
+![](images/README/issues.png)
+
 ## 英文语言包
 必须要 VS 安装英文语言包，否则无法安装库。
+
+## CMake
+```cmd
+cmake .. -DCMAKE_TOOLCHAIN_FILE="C:\L\C++\vcpkg\scripts\buildsystems\vcpkg.cmake" -DVCPKG_TARGET_TRIPLET=x64-windows-static-md
+```
+
+对于有 CMake 支持的包，可以直接 find_package：
+```cmake
+find_package(RapidJSON CONFIG REQUIRED)
+target_link_libraries(main PRIVATE rapidjson)
+```
+对于没有 CMake 支持的包，需要手动 find_path 和 find_library：
+```cmake
+find_path(DETOURS_INCLUDE_DIR detours/detours.h)
+find_library(DETOURS_LIBRARY detours)
+
+target_include_directories(main
+    PRIVATE ${DETOURS_INCLUDE_DIR}
+    )
+target_link_libraries(main
+    PRIVATE ${DETOURS_LIBRARY}
+    )
+```
 
 ## triplet 问题
 ```cmd
@@ -23,6 +48,12 @@ vcpkg install zlib --triplet x64-windows
 [Integration - vcpkg](https://vcpkg.readthedocs.io/en/latest/users/integration/#triplet-selection)
 
 项目右键，左侧列表就有 vcpkg
+
+## 库版本问题
+[How to specify a version of a library - Issue #1681 - microsoft/vcpkg](https://github.com/microsoft/vcpkg/issues/1681)
+1. git checkout <sha> -- prots/boost
+2. [Vcpkg 2020.04 Update and Product Roadmap - C++ Team Blog](https://devblogs.microsoft.com/cppblog/vcpkg-2020-04-update-and-product-roadmap/)
+3. [vcpkg/versioning.md at master - microsoft/vcpkg](https://github.com/microsoft/vcpkg/blob/master/docs/users/versioning.md)
 
 ## proxy 问题
 ```cmd
@@ -100,3 +131,15 @@ yaml-cpp:x64-windows-static-md                     0.6.3#1          yaml-cpp is 
 buildtrees 似乎是 installed 和 packageds 的链接源，不能乱删。
 
 [Automatic clean up of old files? - Issue #2874 - microsoft/vcpkg](https://github.com/Microsoft/vcpkg/issues/2874)
+
+## Linux
+```sh
+git clone https://github.com/microsoft/vcpkg
+./vcpkg/bootstrap-vcpkg.sh
+```
+x64 下默认 triplet 是 x64-linux（static）
+
+
+[vcpkg/overlay-triplets-linux-dynamic.md at master - microsoft/vcpkg](https://github.com/microsoft/vcpkg/blob/master/docs/examples/overlay-triplets-linux-dynamic.md)
+
+dynamic 需要用 overlay-triplets，但是不一定能编译成功
