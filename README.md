@@ -7,6 +7,7 @@
   - Types
     - String
       - [Compilation](Languages/C/Types/String/Compilation.md)
+  - [Functions](Languages/C/Functions/README.md)
 - [C++](Languages/C++/README.md)
   - [Scopes](Languages/C++/Scopes.md)
   - [Namespaces](Languages/C++/Namespaces.md)
