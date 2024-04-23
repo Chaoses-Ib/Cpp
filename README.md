@@ -40,6 +40,7 @@
       - [Static Assertions](Languages/C++/Errors/Assertions/Static.md)
     - [Exceptions](Languages/C++/Errors/Exceptions/README.md)
   - [Attributes](Languages/C++/Attributes.md)
+  - [Reflection](Languages/C++/Reflection.md)
   - Preprocessor
     - [Feature Testing](Languages/C++/Preprocessor/Feature%20Testing.md)
 - [Carbon](Languages/Carbon/README.md)
@@ -48,6 +49,7 @@
 - Text
   - [Templating](Libraries/Text/Templating/README.md)
     - [{fmt}](Libraries/Text/Templating/{fmt}.md)
+- [Serialization](Libraries/Serialization.md)
 - IO
   - Streams
     - [Input Streams](Libraries/IO/Streans/Input%20Streams.md)
