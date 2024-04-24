@@ -41,3 +41,13 @@
 - [`std::bitset<8>`](https://en.cppreference.com/w/cpp/utility/bitset)
 
 [Is there 'byte' data type in C++? - Stack Overflow](https://stackoverflow.com/questions/20024690/is-there-byte-data-type-in-c)
+
+## Character types
+### `char8_t`
+[`/Zc:char8_t` (Enable C++20 `char8_t` type) | Microsoft Learn](https://learn.microsoft.com/en-us/cpp/build/reference/zc-char8-t?view=msvc-170)
+```cpp
+// Compiles in C++17, Error C2440 in C++20 without /Zc:char8_t-
+const char* s = u8"Hello";
+// Compiles in C++20 without /Zc:char8_t-, or C++17 with /Zc:char8_t
+const char8_t* s = u8"Hello";
+```

@@ -1,5 +1,9 @@
 # Serialization
-- [reflect-cpp: A C++20 library for fast serialization, deserialization and validation using reflection. Supports JSON, BSON, CBOR, flexbuffers, msgpack, TOML, XML, YAML / msgpack.org\[C++20\]](https://github.com/getml/reflect-cpp)
+- [reflect-cpp: A C++20 library for fast serialization, deserialization and validation using reflection. Supports JSON, BSON, CBOR, flexbuffers, msgpack, TOML, XML, YAML / msgpack.org](https://github.com/getml/reflect-cpp) (C++20)
+  - [Custom classes](https://github.com/getml/reflect-cpp/blob/main/docs/custom_classes.md)
+    - No private or protected direct non-static data members
+  - [Make sure it compiles with fno-exceptions - Issue #71](https://github.com/getml/reflect-cpp/issues/71)
+  - [Upload to vcpkg - Issue #55](https://github.com/getml/reflect-cpp/issues/55)
 
   [reflect-cpp - Now with compile time extraction of field names from structs and enums using C++-20. : r/cpp](https://www.reddit.com/r/cpp/comments/18ecqu8/reflectcpp_now_with_compile_time_extraction_of/)
 
@@ -13,7 +17,17 @@ Macros:
 
 ## JSON
 - reflect-cpp
-- [Glaze: Extremely fast, in memory, JSON and interface library for modern C++](https://github.com/stephenberry/glaze)
+- [Glaze: Extremely fast, in memory, JSON and interface library for modern C++](https://github.com/stephenberry/glaze) (C++20)
+  - [Pure Reflection](https://github.com/stephenberry/glaze/blob/main/docs/pure-reflection.md)
+    - No user-declared constructors
+    - No private or protected direct non-static data members
+    - No virtual base classes
+    - Glaze may silently fail (return `"{}"`) if these conditions are not met.
+    - [Split `make_reflectable` to a separate header - Issue #956](https://github.com/stephenberry/glaze/issues/956)
+  - No exceptions, no RTTI
+  - [JSON-RPC 2.0 support](https://github.com/stephenberry/glaze/blob/main/docs/rpc/json-rpc.md)
+  - vcpkg
+  - Zero docs on header organization.
 
   [Glaze JSON library version 1.0 release : r/cpp](https://www.reddit.com/r/cpp/comments/11fanh5/glaze_json_library_version_10_release/)
 
@@ -36,3 +50,5 @@ Schemas:
 - Protocol Buffers
 
 [Modern C++ JSON serialization library recommendations : r/cpp](https://www.reddit.com/r/cpp/comments/cmqawn/modern_c_json_serialization_library/)
+
+[stephenberry/json\_performance: Performance profiling of JSON libraries](https://github.com/stephenberry/json_performance)
