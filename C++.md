@@ -1,12 +1,15 @@
 # C++
 [Wikipedia](https://en.wikipedia.org/wiki/C%2B%2B)
 
-[cppreference.com](https://en.cppreference.com/)
-- ~~[cppreference.com 被墙了？ - V2EX](https://www.v2ex.com/t/836558)~~
-
 [RedSkittleFox/Cpp-Learning-Resources: C++ Learning Resources](https://github.com/RedSkittleFox/Cpp-Learning-Resources)
 
 [Resources for C++ beginners](https://gist.github.com/johnmcfarlane/1b2d9c83e4d3f700ba61e2df4077c613)
+
+## [cppreference.com](https://en.cppreference.com/)
+- [C/C++ Search Extension: The ultimate search extension for C/C++](https://github.com/huhu/cpp-search-extension)
+  - `cc`
+- [cpprefjp/site: cpprefjpサイトのMarkdownソース](https://github.com/cpprefjp/site)
+- ~~[cppreference.com 被墙了？ - V2EX](https://www.v2ex.com/t/836558)~~
 
 ## Blogs
 - [Andrzej's C++ blog | Guidelines and thoughts about C++](https://akrzemi1.wordpress.com/)
