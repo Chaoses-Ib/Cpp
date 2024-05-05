@@ -97,3 +97,20 @@ Adds options to the `COMPILE_OPTIONS` or `INTERFACE_COMPILE_OPTIONS` target prop
 Include directories to be used for every source file compiled with the `<LANG>` compiler. This is meant for specification of system include directories needed by the language for the current platform. The directories always appear at the end of the include path passed to the compiler.
 
 This variable should not be set by project code. It is meant to be set by CMake's platform information modules for the current toolchain, or by a toolchain file when used with `CMAKE_TOOLCHAIN_FILE`.
+
+## CRT
+[`CMAKE_MSVC_RUNTIME_LIBRARY`](https://cmake.org/cmake/help/git-stage/variable/CMAKE_MSVC_RUNTIME_LIBRARY.html)
+
+[`MSVC_RUNTIME_LIBRARY`](https://cmake.org/cmake/help/latest/prop_tgt/MSVC_RUNTIME_LIBRARY.html)
+
+Static:
+```cmake
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+```
+```cmake
+set_property(TARGET foo PROPERTY
+    MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>"
+)
+```
+
+[visual studio - Setting the MSVC runtime in CMake - Stack Overflow](https://stackoverflow.com/questions/10113017/setting-the-msvc-runtime-in-cmake)
