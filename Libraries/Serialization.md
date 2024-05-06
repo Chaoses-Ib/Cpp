@@ -26,8 +26,12 @@ Macros:
     - [Split `make_reflectable` to a separate header - Issue #956](https://github.com/stephenberry/glaze/issues/956)
   - No exceptions, no RTTI
   - [JSON-RPC 2.0 support](https://github.com/stephenberry/glaze/blob/main/docs/rpc/json-rpc.md)
-  - vcpkg
+  - vcpkg (non-official)
+
+    [\[glaze\] Update to 2.6.1 by Chaoses-Ib - Pull Request #38592 - microsoft/vcpkg](https://github.com/microsoft/vcpkg/pull/38592)
+
   - Zero docs on header organization.
+  - ~~[`validate_json` returns `syntax_error` if buffer contains non-ASCII chars - Issue #977](https://github.com/stephenberry/glaze/issues/977)~~
 
   [Glaze JSON library version 1.0 release : r/cpp](https://www.reddit.com/r/cpp/comments/11fanh5/glaze_json_library_version_10_release/)
 

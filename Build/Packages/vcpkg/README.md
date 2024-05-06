@@ -116,6 +116,14 @@ set HTTPS_PROXY=socks5://localhost:10807/
 
 重名问题：[\[sciplot\] Add new port by CaeruleusAqua - Pull Request #15913 - microsoft/vcpkg](https://github.com/microsoft/vcpkg/pull/15913)
 
+## Version updating
+[Adding a new version](https://learn.microsoft.com/en-us/vcpkg/maintainers/registries#adding-a-new-version)
+- [What is the most convenient way to find out SHA512 in `vcpkg_from_github`? - Issue #14968 - microsoft/vcpkg](https://github.com/microsoft/vcpkg/issues/14968)
+
+  Temporarily set SHA512 to 0, `vcpkg install`, get the SHA512 from the error message.
+
+- `./vcpkg x-add-version --all`
+
 ## boost
 ~~[Error: Building package boost-exception:x64-windows failed with: BUILD\_FAILED - Issue #6330 - microsoft/vcpkg](https://github.com/microsoft/vcpkg/issues/6330)~~
 
