@@ -29,6 +29,17 @@ Macros:
 
 [Boost.Predef - 1.76.0](https://www.boost.org/doc/libs/1_76_0/libs/predef/doc/index.html)
 
+## Source files
+- `__FILE__`
+
+  [`__FILE__` macro shows full path - Stack Overflow](https://stackoverflow.com/questions/8487986/file-macro-shows-full-path)
+  - GCC/Clang: `__FILE_NAME__`
+  - MSVC
+    - `/d1trimfile:"$(ProjectDir)\"` (undocumented)
+    - [/FC (Full path of source code file in diagnostics)](https://learn.microsoft.com/en-us/cpp/build/reference/fc-full-path-of-source-code-file-in-diagnostics?view=msvc-170)
+
+      Disabling `/FC` will not make `__FILE__` to be base file names.
+
 ## Date, time and timestamp
 Macro | Standard | Description
 --- | --- | ---
