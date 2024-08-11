@@ -19,6 +19,7 @@
       - [Constructors](Languages/C++/Types/Classes/Constructors.md)
       - [Destructors](Languages/C++/Types/Classes/Destructors.md)
       - [Conversion Functions](Languages/C++/Types/Classes/Conversion.md)
+      - [Pointers to Members](Languages/C++/Types/Classes/Pointers.md)
     - [Structure Building](Languages/C++/Types/Structure%20Building.md)
     - [Conversions](Languages/C++/Types/Conversions/README.md)
       - [Automatic Conversions](Languages/C++/Types/Conversions/Automatic.md)

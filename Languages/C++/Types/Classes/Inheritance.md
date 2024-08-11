@@ -100,6 +100,8 @@ class child : public father {
       - 创建虚函数表
       - 每次调用虚函数时查表调用
 
+      [How to obtain the address of a vtable without creating the object : r/cpp\_questions](https://www.reddit.com/r/cpp_questions/comments/z55xlh/how_to_obtain_the_address_of_a_vtable_without/)
+
 [C++中關於 virtual 的兩三事. 在 C++ 中，提到物件導向少不了像是 inheritance 或是… | by 一個沒那麼肥的肥宅 | 今天的天空，有點藍 | Medium](https://medium.com/theskyisblue/c-%E4%B8%AD%E9%97%9C%E6%96%BC-virtual-%E7%9A%84%E5%85%A9%E4%B8%89%E4%BA%8B-1b4e2a2dc373)
 
 ## Abstract base classes
