@@ -7,7 +7,8 @@
   - Types
     - String
       - [Compilation](Languages/C/Types/String/Compilation.md)
-      - [CHARARRAY](Languages/C/Types/String/CHARARRAY.md)
+      - [Inline](Languages/C/Types/String/Inline.md)
+      - [Obfuscation](Languages/C/Types/String/Obfuscation/README.md)
   - [Functions](Languages/C/Functions/README.md)
 - [C++](Languages/C++/README.md)
   - [Scopes](Languages/C++/Scopes.md)

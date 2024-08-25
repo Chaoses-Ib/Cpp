@@ -1,4 +1,12 @@
-# CHARARRAY
+# Inline Strings
+- [字面量](#字面量)
+- [char 数组](#char-数组)
+- [CHARARRAY](#chararray)
+  - [Pure template version](#pure-template-version)
+- [DEF_CHARARRAY](#def_chararray)
+- [CHARARRAY_8](#chararray_8)
+- [pyj2323/StrCrypt](Obfuscation/README.md)
+
 [string - C++: Can a macro expand "abc" into 'a', 'b', 'c'? - Stack Overflow](https://stackoverflow.com/questions/4583022/c-can-a-macro-expand-abc-into-a-b-c)
 
 我的操作的确模拟了字符数组，但字符数组并不能解决问题，这种方法只适用于短文本  
@@ -312,6 +320,7 @@ __forceinline constexpr auto CHARARRAY_make_array(std::index_sequence<Is...>) {
         return CHARARRAY_make_array<Str>( std::make_index_sequence<std::size(Str::str()) / 8>() );  \
     }()
 
+[[msvc::flatten]]
 int main() {
     auto a = CHARARRAY("012345678901234567890123456789");
     cout << a.data() << endl;
@@ -330,3 +339,5 @@ int main() {
 ![](images/CHARARRAY/CHARARRAY_8-012345-uint64_t.png) <br /> 长度 36 | ![](images/CHARARRAY/CHARARRAY_8-012345-uint32_t.png) 长度 34
 
 文本过长时强制内联会失效，变成函数。
+
+但是即使开了 `/O2` 和 `flatten` 也会生成几个多余的 lambda，里面会引用静态内存存的原始文本，明明都没调用到。不过链接时可能会优化掉。
