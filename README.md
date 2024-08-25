@@ -7,6 +7,7 @@
   - Types
     - String
       - [Compilation](Languages/C/Types/String/Compilation.md)
+      - [CHARARRAY](Languages/C/Types/String/CHARARRAY.md)
   - [Functions](Languages/C/Functions/README.md)
 - [C++](Languages/C++/README.md)
   - [Scopes](Languages/C++/Scopes.md)
