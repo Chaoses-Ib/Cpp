@@ -199,6 +199,33 @@ int main(){
 
 使用 `return std::array<TChar, sizeof...(Is)+1>{ Str::str()[Is]..., '\0' };` 可以改善长文本的复制指令
 
+### Pure template version
+```cpp
+#include <utility>
+#include <array>
+#include <iostream>
+
+using namespace std;
+
+template <class _Ty, std::size_t N, std::size_t ... Is>
+__forceinline constexpr std::array<_Ty, N> to_array(const _Ty(&a)[N], std::index_sequence<Is...>)
+{
+    return { {a[Is]...} };
+}
+
+template <class _Ty, std::size_t N>
+__forceinline constexpr std::array<_Ty, N> CHARARRAY(const _Ty(&a)[N])
+{
+    return to_array(a, std::make_index_sequence<N>());
+}
+
+int main(){
+    auto a = CHARARRAY("01234567890123");
+    cout << a.data() << endl;
+}
+```
+临界是 14 个字符
+
 ## DEF_CHARARRAY
 ```cpp
 #include <utility>
@@ -258,6 +285,38 @@ int main(){
 临界是 "012345678901234"，16个字符
 
 ## CHARARRAY_8
+```cpp
+#include <utility>
+#include <array>
+#include <iostream>
+
+using namespace std;
+
+template <typename Str, std::size_t... Is>
+__forceinline constexpr auto CHARARRAY_make_array(std::index_sequence<Is...>) {
+    using TChar = std::remove_const_t< std::remove_reference_t< decltype(Str::str()[0]) > >;
+    union {
+        std::array<uint64_t, sizeof...(Is)> i;
+        std::array<TChar, std::size(Str::str()) - 7> s;
+    } arr{ ((uint64_t*)Str::str())[Is]... };
+    return arr.s;
+}
+
+#define CHARARRAY(STRING)                                  \
+    []{                                                    \
+        struct Str {                                       \
+            static constexpr decltype(auto) str() {        \
+                return (STRING"\0\0\0\0\0\0\0");           \
+            }                                              \
+        };                                                 \
+        return CHARARRAY_make_array<Str>( std::make_index_sequence<std::size(Str::str()) / 8>() );  \
+    }()
+
+int main() {
+    auto a = CHARARRAY("012345678901234567890123456789");
+    cout << a.data() << endl;
+}
+```
 `/std:c++17 /O2`
 
 ### "012345678901234567890123456789"
