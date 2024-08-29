@@ -25,12 +25,15 @@ Macros:
     - Glaze may silently fail (return `"{}"`) if these conditions are not met.
     - [Split `make_reflectable` to a separate header - Issue #956](https://github.com/stephenberry/glaze/issues/956)
   - No exceptions, no RTTI
+    - ~~[Disable exceptions if a specific macro is defined - Issue #1279 - stephenberry/glaze](https://github.com/stephenberry/glaze/issues/1279)~~
+  - 反序列化在开启 `use_hash_comparison` 时只会比较 perfect hash，不会产生字符串；不过序列化会产生 `"field":` 字符串。
   - [JSON-RPC 2.0 support](https://github.com/stephenberry/glaze/blob/main/docs/rpc/json-rpc.md)
   - vcpkg (non-official)
 
     [\[glaze\] Update to 2.6.1 by Chaoses-Ib - Pull Request #38592 - microsoft/vcpkg](https://github.com/microsoft/vcpkg/pull/38592)
 
   - Zero docs on header organization.
+  - 3-space indentation
   - ~~[`validate_json` returns `syntax_error` if buffer contains non-ASCII chars - Issue #977](https://github.com/stephenberry/glaze/issues/977)~~
 
   [Glaze JSON library version 1.0 release : r/cpp](https://www.reddit.com/r/cpp/comments/11fanh5/glaze_json_library_version_10_release/)

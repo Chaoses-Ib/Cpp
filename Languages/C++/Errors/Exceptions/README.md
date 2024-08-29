@@ -30,6 +30,8 @@ try {
 [Can't catch a C++ exception - Stack Overflow](https://stackoverflow.com/questions/28920320/cant-catch-a-c-exception/28920447)
 - `throw;` 是重新抛出异常，不是抛出空异常
 
+[consider using `__cpp_exceptions` and/or `__EXCEPTIONS` to disable/enable exception support - Issue #498 - nlohmann/json](https://github.com/nlohmann/json/issues/498)
+
 ## [`std::exception`](https://en.cppreference.com/w/cpp/error/exception)
 1. `logic_error`
    1. `invalid_argument`

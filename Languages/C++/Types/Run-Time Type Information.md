@@ -14,6 +14,27 @@ pointing to?
 > The answer is surprisingly simple. Since every polymorphic object contains a pointer to a vtable, compilers leverage that fact by co-locating class-type information with the class vtable. Specifically, the compiler places a pointer immediately prior to the class vtable. This pointer points to a structure that contains information used to determine the name of the class that owns the vtable.[^ida]
 
 ### MSVC
+[/GR (Enable Run-Time Type Information)](https://learn.microsoft.com/en-us/cpp/build/reference/gr-enable-run-time-type-information?view=msvc-170):
+- `_CPPRTTI`
+
+Static RTTI:
+- `/D_HAS_STATIC_RTTI=0`
+  
+  Adding `HAS_STATIC_RTTI=0` to Preprocessor Definitions does not work.
+
+  [`JSON_HAS_STATIC_RTTI` - JSON for Modern C++](https://json.nlohmann.me/api/macros/json_has_static_rtti/)
+
+- `warning STL4040: The contents of <any> require static RTTI`
+
+  [c++ - std::any without RTTI, how does it work? - Stack Overflow](https://stackoverflow.com/questions/51361606/stdany-without-rtti-how-does-it-work)
+
+  `BOOST_ASIO_DISABLE_STD_ANY`
+
+- `std::function` also uses
+
+Disable RTTI: `/GR- /D_HAS_STATIC_RTTI=0`
+- [Lambdas always have debug information in release mode - Developer Community](https://developercommunity.visualstudio.com/t/lambdas-always-have-debug-information-in-release-m/1215001)
+
 > In Visual C++, the pointer points to a Microsoft `RTTICompleteObjectLocator` structure, which in turn contains a pointer to a `TypeDescriptor` structure. The `TypeDescriptor` structure contains a character array that specifies the name of the polymorphic class.[^ida]
 
 Structures[^igorsk]:
