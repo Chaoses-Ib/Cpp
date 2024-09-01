@@ -24,6 +24,9 @@
     - [Run-Time Type Information](Languages/C++/Types/Run-Time%20Type%20Information.md)
   - Storage
     - [Dynamic Storage](Languages/C++/Storage/Dynamic.md)
+  - [Initialization](Languages/C++/Initialization/README.md)
+    - [Structured Bindings](Languages/C++/Initialization/Structured.md)
+    - [Aggregate Initialization](Languages/C++/Initialization/Aggregate.md)
   - Expressions
     - Operators
       - [Operator Overloading](Languages/C++/Expressions/Operators/Overloading.md)
