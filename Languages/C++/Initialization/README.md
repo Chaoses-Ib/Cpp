@@ -1,9 +1,13 @@
-# Initialization
+# [Initialization](https://en.cppreference.com/w/cpp/language/initialization)
 ## 整数初始化
 整数也可以用 `int num(123);` 的方式初始化  
 以及列表初始化：`int num = {123};` 和 `int num{123};`（空大括号被认为是0）
 
-## 默认初始化
+## [Default initialization](https://en.cppreference.com/w/cpp/language/default_initialization)
+```cpp
+T object;
+new T
+```
 - 拥有自动存储、动态存储的对象会拥有不确定的值
   - 是否在构造函数中初始化成员，会造成不同的结果
 - 拥有静态存储、线程存储的对象会进行零初始化
@@ -21,6 +25,50 @@ int *p = new int();
 </details>
 
 [C++手稿：哪些变量会自动初始化？ | Harttle Land](https://harttle.land/2015/10/05/cpp-variable-init.html)
+
+## [Value initialization](https://en.cppreference.com/w/cpp/language/value_initialization)
+```cpp
+T ()
+new T ()
+Class::Class(...) : member () { ... }
+T object {};
+T {}
+new T {}
+Class::Class(...) : member {} { ... }	
+```
+
+## [Direct initialization](https://en.cppreference.com/w/cpp/language/direct_initialization)
+```cpp
+T object ( arg );
+T object ( arg1, arg2, ... );
+
+// Initialization of an object of non-class type with a single brace-enclosed initializer (note: for class types and other uses of braced-init-list, see list-initialization)
+T object { arg };
+
+T ( other )
+T ( arg1, arg2, ... )
+
+static_cast< T >( other )
+
+new T( args, ... )
+
+Class::Class() : member( args, ... ) { ... }
+
+[arg]() { ... }
+```
+可能会被误解析为函数声明，例如：
+```cpp
+// Function declaration
+DB db(std::string(get_db_path()));
+DB db(std::string get_db_path());
+
+// Direct initialization
+DB db((std::string)get_db_path());
+DB db{std::string(get_db_path())};
+```
+
+## [List initialization](https://en.cppreference.com/w/cpp/language/list_initialization)
+[c++ - What are the advantages of list initialization (using curly braces)? - Stack Overflow](https://stackoverflow.com/questions/18222926/what-are-the-advantages-of-list-initialization-using-curly-braces)
 
 ## 全局初始化
 [VC++全局变量初始化 - hanford - 博客园](https://www.cnblogs.com/hanford/p/6027963.html)
