@@ -66,6 +66,7 @@
   - [CMake](<Build/Build Systems/CMake/README.md>)
     - [Compiling](Build/Build%20Systems/CMake/Compiling.md)
     - [Linking](Build/Build%20Systems/CMake/Linking.md)
+  - [MSBuild](<Build/Build Systems/MSBuild/README.md>)
 - Package Managers
   - [vcpkg](Build/Packages/vcpkg/README.md)
 
