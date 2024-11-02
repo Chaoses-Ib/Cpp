@@ -17,7 +17,7 @@ Macros:
 
 ## JSON
 - reflect-cpp
-- [Glaze: Extremely fast, in memory, JSON and interface library for modern C++](https://github.com/stephenberry/glaze) (C++20)
+- [Glaze: Extremely fast, in memory, JSON and interface library for modern C++](https://github.com/stephenberry/glaze) (C++23)
   - [Pure Reflection](https://github.com/stephenberry/glaze/blob/main/docs/pure-reflection.md)
     - No user-declared constructors
     - No private or protected direct non-static data members
@@ -41,7 +41,10 @@ Macros:
   [Glaze 2.4.0 update: Pure reflection, Volatile support for hardware : r/cpp](https://www.reddit.com/r/cpp/comments/1bpssce/glaze_240_update_pure_reflection_volatile_support/)
 
 Macros:
-- [nlohmann/json: JSON for Modern C++](https://github.com/nlohmann/json)
+- [nlohmann/json: JSON for Modern C++](https://github.com/nlohmann/json) (C++11)
+  - Single header
+  - > When using `template get<your_type>()`, `your_type` **MUST** be [DefaultConstructible](https://en.cppreference.com/w/cpp/named_req/DefaultConstructible). (There is a way to bypass this requirement described later.)
+  - > In function `from_json`, use function [`at()`](https://json.nlohmann.me/api/basic_json/at/) to access the object values rather than `operator[]`. In case a key does not exist, `at` throws an exception that you can handle, whereas `operator[]` exhibits undefined behavior.
 - [taoJSON: C++ header-only JSON library](https://github.com/taocpp/json)
 
   [Binding Traits](https://github.com/taocpp/json/blob/main/doc/Binding-Traits.md)
@@ -51,7 +54,8 @@ Macros:
   [compile-time reflection and json de/serialization in c++ : r/cpp](https://www.reddit.com/r/cpp/comments/152g5tb/compiletime_reflection_and_json_deserialization/)
 
 Manual:
-- [Tencent/RapidJSON: A fast JSON parser/generator for C++ with both SAX/DOM style API](https://github.com/Tencent/rapidjson)
+- nlohmann/json
+- [Tencent/RapidJSON: A fast JSON parser/generator for C++ with both SAX/DOM style API](https://github.com/Tencent/rapidjson) (≤C++11)
 
 Schemas:
 - Protocol Buffers
