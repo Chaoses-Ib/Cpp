@@ -69,6 +69,8 @@
   - [MSBuild](<Build/Build Systems/MSBuild/README.md>)
 - Package Managers
   - [vcpkg](Build/Packages/vcpkg/README.md)
+- IDE
+  - [VS Code](Build/IDE/VS%20Code/README.md)
 
 ## Development
 - [Visual Studio Code](Development/Visual%20Studio%20Code.md)
