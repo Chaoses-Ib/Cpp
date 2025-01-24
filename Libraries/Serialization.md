@@ -26,6 +26,15 @@ Macros:
     - [Split `make_reflectable` to a separate header - Issue #956](https://github.com/stephenberry/glaze/issues/956)
   - No exceptions, no RTTI
     - ~~[Disable exceptions if a specific macro is defined - Issue #1279 - stephenberry/glaze](https://github.com/stephenberry/glaze/issues/1279)~~
+  - [Unknown keys](https://github.com/stephenberry/glaze/blob/main/docs/unknown-keys.md): **error by default**
+    ```cpp
+    T value{};
+    const auto ec = glz::read<glz::opts{.error_on_unknown_keys = false}>(value, buffer);
+    if (!ec) {
+        return unexpected(ec);
+    }
+    return value;
+    ```
   - 反序列化在开启 `use_hash_comparison` 时只会比较 perfect hash，不会产生字符串；不过序列化会产生 `"field":` 字符串。
   - [JSON-RPC 2.0 support](https://github.com/stephenberry/glaze/blob/main/docs/rpc/json-rpc.md)
   - vcpkg (non-official)
