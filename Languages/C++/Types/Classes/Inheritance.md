@@ -104,6 +104,41 @@ class child : public father {
 
 [C++中關於 virtual 的兩三事. 在 C++ 中，提到物件導向少不了像是 inheritance 或是… | by 一個沒那麼肥的肥宅 | 今天的天空，有點藍 | Medium](https://medium.com/theskyisblue/c-%E4%B8%AD%E9%97%9C%E6%96%BC-virtual-%E7%9A%84%E5%85%A9%E4%B8%89%E4%BA%8B-1b4e2a2dc373)
 
+## Inheriting constructors
+[Using-declaration - cppreference.com](https://en.cppreference.com/w/cpp/language/using_declaration)
+> If the *using-declaration* refers to a constructor of a direct base of the class being defined (e.g. `using Base::Base;`), all constructors of that base (ignoring member access) are made visible to overload resolution when initializing the derived class.
+>
+> If overload resolution selects an inherited constructor, it is accessible if it would be accessible when used to construct an object of the corresponding base class: the accessibility of the using-declaration that introduced it is ignored.
+>
+> If overload resolution selects one of the inherited constructors when initializing an object of such derived class, then the `Base` subobject from which the constructor was inherited is initialized using the inherited constructor, and all other bases and members of `Derived` are initialized as if by the defaulted default constructor (default member initializers are used if provided, otherwise default initialization takes place). The entire initialization is treated as a single function call: initialization of the parameters of the inherited constructor is [sequenced before](https://en.cppreference.com/w/cpp/language/eval_order "cpp/language/eval order") initialization of any base or member of the derived object.
+
+> If the `Base` base class subobject is not to be initialized as part of the `Derived` object (i.e., `Base` is a [virtual base class](https://en.cppreference.com/w/cpp/language/derived_class#Virtual_base_classes "cpp/language/derived class") of `Derived`, and the `Derived` object is not the [most derived object](https://en.cppreference.com/w/cpp/language/object#Subobjects "cpp/language/object")), the invocation of the inherited constructor, including the evaluation of any arguments, is omitted.
+
+> If the constructor was inherited from multiple base class subobjects of type `Base`, the program is ill-formed, similar to multiply-inherited non-static member functions.
+
+> As with using-declarations for any other non-static member functions, if an inherited constructor matches the signature of one of the constructors of `Derived`, it is hidden from lookup by the version found in `Derived`. If one of the inherited constructors of `Base` happens to have the signature that matches a copy/move constructor of the `Derived`, it does not prevent implicit generation of `Derived` copy/move constructor (which then hides the inherited version, similar to `using operator=`).
+
+> Within a [templated class](https://en.cppreference.com/w/cpp/language/templates "cpp/language/templates"), if a using-declaration refers to a [dependent name](https://en.cppreference.com/w/cpp/language/dependent_name "cpp/language/dependent name"), it is considered to name a constructor if the `nested-name-specifier` has a terminal name that is the same as the `unqualified-id`.
+```cpp
+template<class T>
+struct A : T
+{
+    using T::T; // OK, inherits constructors of T
+};
+ 
+template<class T, class U>
+struct B : T, A<U>
+{
+    using A<U>::A; // OK, inherits constructors of A<U>
+    using T::A;    // does not inherit constructor of T
+                   // even though T may be a specialization of A<>
+};
+```
+
+[c++11 - C++ Default constructor not inherited with "using" when move and copy constructors present - Stack Overflow](https://stackoverflow.com/questions/44522331/c-default-constructor-not-inherited-with-using-when-move-and-copy-constructo)
+> Before C++17, the default constructor of the base class won't be [inherited](http://en.cppreference.com/w/cpp/language/using_declaration#Inheriting_constructors) via `using`:
+> > All candidate inherited constructors that aren't the default constructor or the copy/move constructor and whose signatures do not match user-defined constructors in the derived class, are implicitly declared in the derived class. (until C++17)
+
 ## Abstract base classes
 - 纯虚函数（pure virtual function）
 

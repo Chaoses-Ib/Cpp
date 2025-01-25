@@ -41,6 +41,17 @@
 
   [Effective C++ 16：使用同样的形式来new和delete | Harttle Land](https://harttle.land/2015/08/07/effective-cpp-16.html)
 
+## Allocators
+[Allocators | Microsoft Learn](https://learn.microsoft.com/en-us/cpp/standard-library/allocators?view=msvc-170)
+
+- [boost/container/new\_allocator.hpp](https://www.boost.org/doc/libs/1_87_0/boost/container/new_allocator.hpp)
+  ```cpp
+  const std::size_t max_count = std::size_t(-1)/(2*sizeof(T));
+  if(BOOST_UNLIKELY(count > max_count))
+      throw_bad_alloc();
+  ```
+  画蛇添足，开 PAE 就有问题了。
+
 ## Classes
 除了构造和析构，还要注意以下函数：
 - 拷贝构造

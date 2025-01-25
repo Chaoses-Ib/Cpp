@@ -48,6 +48,7 @@
 - [Carbon](Languages/Carbon/README.md)
 
 ## Libraries
+- [Containers](Libraries/Containers/README.md)
 - Text
   - [Templating](Libraries/Text/Templating/README.md)
     - [{fmt}](Libraries/Text/Templating/{fmt}.md)
