@@ -56,6 +56,8 @@
 - IO
   - Streams
     - [Input Streams](Libraries/IO/Streans/Input%20Streams.md)
+- [GUI](Libraries/GUI/README.md)
+  - [MFC](Libraries/GUI/MFC/README.md)
 
 ## [Build](Build/README.md)
 - Compiling
