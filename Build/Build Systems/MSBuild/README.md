@@ -90,6 +90,17 @@
 - `OutDir`
   - `/p:ConfigurationName=""` + `$(ConfigurationName)`
 
+    `$(ConfigurationName)` is not always set by default, even it's always fine in the evaluation window of VS. (at least v17.12.4~17.13.0)
+    - `$(Configuration)$(ConfigurationName)`
+
+    [visual studio - What is the MSbuild/VS $(ConfigurationName) variable - Stack Overflow](https://stackoverflow.com/questions/74429271/what-is-the-msbuild-vs-configurationname-variable)
+
+    [c# - MSBUild .NET 6.0 constant not work anymore - Stack Overflow](https://stackoverflow.com/questions/72644043/msbuild-net-6-0-constant-not-work-anymore)
+
+  - Intermediate directory cannot be shared
+  
+    [visual studio - warning MSB8028: The intermediate directory (Debug\\) contains files shared from another project - Stack Overflow](https://stackoverflow.com/questions/29726394/warning-msb8028-the-intermediate-directory-debug-contains-files-shared-from)
+
 ```pwsh
 # $root = "$PWD\"
 $root = "$PSScriptRoot\"
