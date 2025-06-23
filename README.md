@@ -29,6 +29,7 @@
     - [Aggregate Initialization](Languages/C++/Initialization/Aggregate.md)
   - Expressions
     - Operators
+      - [`sizeof` Operator](Languages/C++/Expressions/Operators/sizeof.md)
       - [Operator Overloading](Languages/C++/Expressions/Operators/Overloading.md)
     - [Constant Expressions](Languages/C++/Expressions/Constant.md)
   - [Functions](Languages/C++/Functions/README.md)
