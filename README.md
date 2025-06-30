@@ -63,15 +63,17 @@
 ## [Build](Build/README.md)
 - Compiling
   - [Compilers](Build/Compiling/Compilers.md)
-  - [Linking](Build/Compiling/Linking.md)
-  - [Dynamic Linking](Build/Compiling/Dynamic%20Linking.md)
   - [Optimization](Build/Compiling/Optimization.md)
+- [Linking](Build/Linking/README.md)
+  - [Static Linking](Build/Linking/Static.md)
+  - [Dynamic Linking](Build/Linking/Dynamic.md)
 - [C Runtime Library (CRT)](Build/CRT.md)
 - Build Systems
   - [CMake](<Build/Build Systems/CMake/README.md>)
     - [Compiling](Build/Build%20Systems/CMake/Compiling.md)
     - [Linking](Build/Build%20Systems/CMake/Linking.md)
   - [MSBuild](<Build/Build Systems/MSBuild/README.md>)
+  - [Cargo](<Build/Build Systems/Cargo/README.md>)
 - Package Managers
   - [vcpkg](Build/Packages/vcpkg/README.md)
     - [Triplets](Build/Packages/vcpkg/Triplets.md)

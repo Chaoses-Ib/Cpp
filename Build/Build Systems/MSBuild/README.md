@@ -150,3 +150,10 @@ Rust:
 
 ## Tools
 - [cargo-vs: autogenerate visual studio solutions / projects](https://github.com/MaulingMonkey/cargo-vs)
+
+## VS solutions
+Rust:
+- [solv: Microsoft Visual Studio solution validator and parsing library written in Rust](https://github.com/aegoroff/solv)
+
+Go:
+- [solt: Small console app written in Go that allows you to easily analyze sources and Microsoft Visual Studio solutions and projects.](https://github.com/aegoroff/solt)
