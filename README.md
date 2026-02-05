@@ -73,6 +73,7 @@
     - [Compiling](Build/Build%20Systems/CMake/Compiling.md)
     - [Linking](Build/Build%20Systems/CMake/Linking.md)
   - [MSBuild](<Build/Build Systems/MSBuild/README.md>)
+    - [MSBuild on Linux](<Build/Build Systems/MSBuild/Linux.typ>)
   - [Cargo](<Build/Build Systems/Cargo/README.md>)
 - Package Managers
   - [vcpkg](Build/Packages/vcpkg/README.md)
