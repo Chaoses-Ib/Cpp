@@ -16,6 +16,7 @@ Tools:
 - VS: [Resource editors](https://learn.microsoft.com/en-us/cpp/windows/resource-editors?view=msvc-170)
   - [Dialog Editor](https://learn.microsoft.com/en-us/cpp/windows/dialog-editor?view=msvc-170)
 - [Resource Hacker](https://www.angusj.com/resourcehacker/)
+- [Resource Cracker](https://www.pelock.com/products/resource-cracker)
 - [Resource Editor. Resource Editing Software Tool For Windows.](https://www.resource-editor.com/)
 - [RisohEditor: Another free Win32 resource editor](https://github.com/katahiromz/RisohEditor)
 - 易语言: 黑月资源脚本编辑器
